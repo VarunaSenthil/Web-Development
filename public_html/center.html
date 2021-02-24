@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animations and their effects </title>
+        <style>
+            body{
+                background-color: buttonface;
+                background-image: linear-gradient(to right,rosybrown,yellow,yellowgreen);
+            }
+           h1{
+                top: 0px;
+                text-align: center;
+                text-shadow: 2px 2px red, 2px 2px white;
+            }
+            img{
+                border-radius: 6px;
+                float: right;
+            }
+            @keyframes dog{
+                0%{right: 0px;}
+                25%{right:300px;}
+                50%{right: 600px;}
+                75%{right: 800px;}
+                100%{right: 1000px;}
+            }
+            div{
+                position: relative;
+                animation-name: dog; animation-duration: 4s; animation-delay: 1s; animation-iteration-count: 5;
+                animation-timing-function: ease;
+            }
+            footer{
+                position: fixed; left: 0px; bottom: 0px;
+                width: 100%; background-color: red; overflow: hidden;
+            }
+            p{
+
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML is the building block of web</h1>
+        <!-- The dog image moves from right to left depends upon the @keyframes --> 
+        <div>
+            <img src="img/dog.jpg" alt="dog" width="200" height="200">
+        </div>
+        <footer>
+            <p><b>Creater: varuna priya  mailto: varunaoviya@gmail.com contact no: 639178028</b></p>
+        </footer>
+    </body>
+</html>

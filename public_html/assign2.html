@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using of images</title>
+        <style>
+            body{
+                align-items: center;
+            }
+            h1{
+                text-align: center;
+            }
+            h3{
+                color: red;
+            }
+            button{
+                margin-bottom: 0px;
+                margin-left: 20px;
+            }
+            .image{ position: relative; width: 50%; max-width: 300px;}
+            .image div{
+                position: absolute; right: 0; bottom: 0;  width: 50%; background: black; opacity: 0;
+                color: white;  margin-bottom: 5px; text-align: center; font-size: 20px;
+            }
+            .image:hover div{
+                opacity: 1;
+            }
+            </style>
+    </head>
+    <script>
+       function zoomin() { 
+            var GFG = document.getElementById("nature"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth + 100) + "px"; 
+        } 
+          
+        function zoomout() { 
+            var GFG = document.getElementById("nature"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth - 100) + "px"; 
+        } 
+    </script>
+    <body>
+        <div class="image">
+        <h1>Event Handling</h1>
+        <h3>Hover the image</h3>
+        <img src="img/ar.jfif" alt="arimage" class= "emo" title="AR.Rahman">
+        <div>AR.Rahman The Legend</div>
+        </div>
+        <div class="zoom">
+        <h3>Zoom the image</h3>
+        <img src="img/peacock.jfif" id="nature" GFG="250" alt="peacock">
+        <button type="submit" onclick="zoomin()" >Zoom in</button>
+         <button type="submit" onclick="zoomout()" >Zoom out</button>
+        </div>
+    </body>
+</html>
